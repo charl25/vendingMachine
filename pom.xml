@@ -8,6 +8,7 @@
     <artifactId>vendingMachine</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+
     <build>
         <plugins>
             <plugin>
@@ -18,8 +19,25 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.22.1</version>
+            </plugin>
+
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>7.9.1</version>
+                <configuration>
+                    <url>jdbc:h2:./target/jdbc_greet_db</url>
+                    <user>sa</user>
+                    <password></password>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
+
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -32,6 +50,11 @@
             <artifactId>junit-jupiter</artifactId>
             <version>RELEASE</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>1.4.199</version>
         </dependency>
     </dependencies>
 

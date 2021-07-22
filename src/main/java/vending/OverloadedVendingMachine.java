@@ -100,6 +100,21 @@ public class OverloadedVendingMachine {
     }
 
 
+    public void help(){
+        System.out.println("Items: 'drinks' 'snacks' 'chocolates'");
+        System.out.println();
+        System.out.println("Buying 1 of each item: buy products");
+        System.out.println("Buying a single Item: buy item");
+        System.out.println("Buying a specified number of an Item: buy item quantity");
+        System.out.println();
+        System.out.println("Adding 3 of each item: add products");
+        System.out.println("Adding a single Item: add item");
+        System.out.println("Adding a specified number of an Item: add item quantity");
+        System.out.println();
+        System.out.println("Getting the total stock left: stock");
+        System.out.println("Getting stock of a single Item: stock item");
+        System.out.println();
+    }
 
     public OverloadedVendingMachine(int softDrinkQty, int saltySnacksQty, int chocolatesQty){
         this.softDrinkQty = softDrinkQty;
