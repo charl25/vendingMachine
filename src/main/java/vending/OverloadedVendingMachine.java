@@ -86,10 +86,16 @@ public class OverloadedVendingMachine {
     }
 
     public int getStock(){
-        int stock = this.chocolatesQty+this.softDrinkQty+this.saltySnacksQty;
-        if(stock<0){
-            stock = 0;
+        if(this.softDrinkQty<0){
+            this.softDrinkQty = 0;
         }
+        if(this.chocolatesQty<0){
+            this.chocolatesQty = 0;
+        }
+        if(this.saltySnacksQty<0){
+            this.saltySnacksQty = 0;
+        }
+        int stock = this.chocolatesQty+this.softDrinkQty+this.saltySnacksQty;
         return stock;
     }
 

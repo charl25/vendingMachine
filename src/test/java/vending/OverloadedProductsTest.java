@@ -15,6 +15,16 @@ public class OverloadedProductsTest {
         app.addStock(prod);
 
         assertEquals(15,app.getStock());
+    }
+
+    @Test
+    public void shouldBuyProductsFromStock(){
+        OverloadedVendingMachine app = new OverloadedVendingMachine(1,5,0);
+        Product prod = new Product();
+
+        app.buy(prod);
+
+        assertEquals(4,app.getStock());
 
     }
 
